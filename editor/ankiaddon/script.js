@@ -36,7 +36,7 @@ window.ankiAddonSetImg = function (path, type) {
         }
     };
 }
-}
+
 
 document.addEventListener("load", function () {
     pycmd("img_src");
