@@ -1,4 +1,4 @@
-var setImg = function (path, type) {
+window.ankiAddonSetImg = function (path, type) {
     if (type == "svg") {
 
     } else {
