@@ -13,6 +13,7 @@ methodDraw.addExtension("Arrows", function(S) {
       addElem = S.addSvgElementFromJson,
       nonce = S.nonce,
       randomize_ids = S.randomize_ids,
+      svgCanvas = methodDraw.canvas,
       selElems;
 
     svgCanvas.bind('setnonce', setArrowNonce);
