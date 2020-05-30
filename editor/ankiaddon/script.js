@@ -39,5 +39,5 @@ var setImg = function (path, type) {
 }
 
 document.addEventListener("load", function () {
-    pycmd("img_uri");
+    pycmd("img_src");
 })
