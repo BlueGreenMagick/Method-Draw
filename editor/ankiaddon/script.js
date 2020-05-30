@@ -1,4 +1,4 @@
-var setImg = function (uri, type) {
+var setImg = function (path, type) {
     if (type == "svg") {
 
     } else {
@@ -15,7 +15,7 @@ var setImg = function (uri, type) {
                     "style": "pointer-events:inherit"
                 }
             });
-            svgCanvas.setHref(newImage, uri); 
+            svgCanvas.setHref(newImage, path); 
             svgCanvas.selectOnly([newImage]);
             svgCanvas.alignSelectedElements("m", "page")
             svgCanvas.alignSelectedElements("c", "page")
@@ -26,7 +26,7 @@ var setImg = function (uri, type) {
         var img_width = 100;
         var img_height = 100;
         var img = new Image()
-        img.src = uri
+        img.src = path
         document.body.appendChild(img);
         img.onload = function () {
             img_width = img.offsetWidth
