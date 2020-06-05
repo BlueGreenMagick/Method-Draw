@@ -38,6 +38,12 @@ window.ankiAddonSetImg = function (path, type) {
     };
 }
 
+window.ankiAddonSaveImg = function(){
+    svgCanvas.clearSelection()
+    svg_str = svgCanvas.getSvgString()
+    pycmd("svg_save:" + svg_str)
+}
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
