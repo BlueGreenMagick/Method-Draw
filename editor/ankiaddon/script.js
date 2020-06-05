@@ -1,4 +1,5 @@
 window.ankiAddonSetImg = function (path, type) {
+    path = atob(path);
     if (type == "svg") {
 
     } else {
@@ -37,7 +38,18 @@ window.ankiAddonSetImg = function (path, type) {
     };
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-document.addEventListener("load", function () {
-    pycmd("img_src");
+async function wait_until_pycmd(cb) {
+    while(typeof pycmd !== "function") {
+        await sleep(100);
+    }
+    cb();
+}
+
+window.addEventListener("load", function (e) {
+    console.log("ABC")
+    wait_until_pycmd(function(){pycmd("img_src")});
 })
