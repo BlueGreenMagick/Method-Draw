@@ -1,5 +1,4 @@
-window.ankiAddonSetImg = function (path, type) {
-    path = atob(path);
+window.ankiAddonSetImg = function (data, type) {
     if (type == "svg") {
 
     } else {
@@ -16,7 +15,7 @@ window.ankiAddonSetImg = function (path, type) {
                     "style": "pointer-events:inherit"
                 }
             });
-            svgCanvas.setHref(newImage, path); 
+            svgCanvas.setHref(newImage, data); 
             svgCanvas.selectOnly([newImage]);
             svgCanvas.alignSelectedElements("m", "page")
             svgCanvas.alignSelectedElements("c", "page")
@@ -27,7 +26,7 @@ window.ankiAddonSetImg = function (path, type) {
         var img_width = 100;
         var img_height = 100;
         var img = new Image()
-        img.src = path
+        img.src = data
         document.body.appendChild(img);
         img.onload = function () {
             img_width = img.offsetWidth
