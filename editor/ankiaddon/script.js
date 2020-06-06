@@ -70,6 +70,5 @@ async function wait_until_pycmd(cb) {
 }
 
 window.addEventListener("load", function (e) {
-    console.log("ABC")
     wait_until_pycmd(function(){pycmd("img_src")});
 })
