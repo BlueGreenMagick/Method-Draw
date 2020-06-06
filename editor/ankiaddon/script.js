@@ -15,8 +15,7 @@
 window.ankiAddonSetImg = function (data, type) {
     if (type == "svg") {
         svgString = atob(data)
-        svgCanvas.setSvgString(svgString);
-        methodDraw.Editor.updateCanvas()
+        methodDraw.loadFromString(svgString)
     } else {
         setImage = function (img_width, img_height) {
             svgCanvas.setResolution(img_width, img_height)
@@ -35,9 +34,8 @@ window.ankiAddonSetImg = function (data, type) {
             svgCanvas.selectOnly([newImage]);
             svgCanvas.alignSelectedElements("m", "page")
             svgCanvas.alignSelectedElements("c", "page")
-            svgCanvas.clearSelection()
-            methodDraw.Editor.updateContextPanel();
-            methodDraw.Editor.updateCanvas();
+            svgCanvas.clearSelection();
+            methodDraw.updateCanvas();
         }
         // put a placeholder img so we know the default dimensions
         var img_width = 100;
