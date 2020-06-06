@@ -18,8 +18,10 @@ window.ankiAddonSetImg = function (data, type) {
                 }
             });
             svgCanvas.setHref(newImage, data);
+            svgCanvas.selectOnly([newImage]);
             svgCanvas.alignSelectedElements("m", "page")
             svgCanvas.alignSelectedElements("c", "page")
+            svgCanvas.clearSelection()
             methodDraw.Editor.updateContextPanel();
             methodDraw.Editor.updateCanvas();
         }
