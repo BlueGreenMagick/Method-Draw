@@ -1,3 +1,17 @@
+/*
+ *
+ * Licensed under the MIT License
+ *
+ * Copyright(c) 2010 Alexis Deveria
+ * Copyright(c) 2010 Pavol Rusnak
+ * Copyright(c) 2010 Jeff Schiller
+ * Copyright(c) 2010 Narendra Sisodiya
+ * Copyright(c)  2012 Mark MacKay
+ * Copyright(c) 2020 Yoonchae Lee
+ * 
+ */
+
+
 window.ankiAddonSetImg = function (data, type) {
     if (type == "svg") {
         svgString = atob(data)
