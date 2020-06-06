@@ -147,7 +147,7 @@ methodDraw.addExtension("shapes", function() {
       id: "tool_shapelib",
       type: "mode_flyout", // _flyout
       position: 6,
-      title: "Shape library",
+      title: "Shape library\n(Long click to change shape)",
       icon: "extensions/ext-shapes.png",
       events: {
         "click": function() {
