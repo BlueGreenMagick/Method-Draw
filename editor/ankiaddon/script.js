@@ -19,6 +19,8 @@ window.ankiAddonSetImg = function (data, type) {
     } else {
         setImage = function (img_width, img_height) {
             svgCanvas.setResolution(img_width, img_height)
+            $("#canvas_width").val(img_width)
+            $("#canvas_height").val(img_height)
             var newImage = svgCanvas.addSvgElementFromJson({
                 "element": "image",
                 "attr": {
